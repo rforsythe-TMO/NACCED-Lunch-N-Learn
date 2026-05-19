@@ -1,0 +1,2553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TMO Sponsored Lunch Activity — NACCED 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=DM+Sans:opsz,wght@9..40,300..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1816;
+  --ink-soft: #3d3a36;
+  --ink-muted: #6b6660;
+  --cream: #f4efe6;
+  --cream-deep: #ebe4d6;
+  --paper: #faf6ed;
+  --clay: #b8552e;
+  --clay-deep: #8f3e1d;
+  --sage: #5a6b4d;
+  --sage-soft: #8a9a7c;
+  --ochre: #c89542;
+  --rule: rgba(26, 24, 22, 0.12);
+  --rule-strong: rgba(26, 24, 22, 0.28);
+  --shadow-sm: 0 1px 2px rgba(26, 24, 22, 0.06);
+  --shadow-md: 0 4px 16px rgba(26, 24, 22, 0.08);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--cream);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.serif { font-family: 'Fraunces', Georgia, serif; font-feature-settings: "ss01"; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+.container { max-width: 1180px; margin: 0 auto; padding: 0 48px; }
+
+/* ─── HERO ──────────────────────────────────────────── */
+
+.hero {
+  padding: 80px 0 100px;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+  background: linear-gradient(180deg, var(--paper) 0%, var(--cream) 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(184, 85, 46, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-eyebrow::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+  max-width: 200px;
+}
+
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 144, 'wght' 380, 'SOFT' 30;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 28px;
+  max-width: 920px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  font-variation-settings: 'opsz' 144, 'wght' 320, 'SOFT' 100, 'WONK' 1;
+  color: var(--clay);
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 40px;
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+  max-width: 800px;
+}
+
+.hero-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hero-meta-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.hero-meta-value {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* ─── SECTIONS ──────────────────────────────────────── */
+
+section {
+  padding: 96px 0;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+
+section:last-of-type { border-bottom: none; }
+
+.section-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 144, 'wght' 400;
+  font-size: clamp(36px, 4.5vw, 56px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  max-width: 800px;
+}
+
+.section-title em {
+  font-style: italic;
+  font-variation-settings: 'opsz' 144, 'wght' 350, 'SOFT' 100;
+  color: var(--clay);
+}
+
+.section-lede {
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 680px;
+  margin-bottom: 56px;
+}
+
+h3 {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 36, 'wght' 500;
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+  color: var(--ink);
+}
+
+h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clay-deep);
+  margin-bottom: 12px;
+}
+
+p { margin-bottom: 16px; color: var(--ink-soft); }
+p:last-child { margin-bottom: 0; }
+
+strong { color: var(--ink); font-weight: 600; }
+
+a { color: var(--clay); text-decoration: none; border-bottom: 1px solid var(--rule); }
+a:hover { border-bottom-color: var(--clay); }
+
+/* ─── CONTEXT GRID ──────────────────────────────────── */
+
+.context-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  margin-top: 48px;
+  border: 1px solid var(--rule);
+}
+
+.context-cell {
+  background: var(--cream);
+  padding: 32px;
+}
+
+.context-cell h4 {
+  margin-bottom: 16px;
+}
+
+.context-cell p {
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ─── CONCEPT BANNER ────────────────────────────────── */
+
+.concept-banner {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.concept-banner.secondary {
+  border-bottom-color: var(--sage);
+}
+
+.concept-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--clay);
+  padding: 6px 12px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.concept-tag.secondary {
+  background: var(--sage);
+}
+
+.concept-banner h2 {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 144, 'wght' 420;
+  font-size: clamp(42px, 5.5vw, 68px);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+.concept-banner h2 em {
+  font-style: italic;
+  font-variation-settings: 'opsz' 144, 'wght' 350, 'SOFT' 100, 'WONK' 1;
+  color: var(--clay);
+}
+
+.concept-banner.secondary h2 em { color: var(--sage); }
+
+.concept-overview {
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 760px;
+  margin-bottom: 64px;
+}
+
+/* ─── WHY IT WORKS ──────────────────────────────────── */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 48px;
+  margin: 48px 0 80px;
+}
+
+.why-item {
+  display: flex;
+  gap: 20px;
+  padding-top: 8px;
+}
+
+.why-num {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 36, 'wght' 380;
+  font-style: italic;
+  font-size: 36px;
+  line-height: 1;
+  color: var(--clay);
+  flex-shrink: 0;
+  width: 48px;
+}
+
+.why-content h4 {
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.why-content p {
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ─── SUB-SECTION HEADER ────────────────────────────── */
+
+.sub-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin: 80px 0 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.sub-header-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--clay);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.sub-header h3 {
+  margin-bottom: 0;
+}
+
+/* ─── TIMELINE (Run of Show) ────────────────────────── */
+
+.timeline {
+  position: relative;
+  margin: 32px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 88px;
+  top: 12px;
+  bottom: 12px;
+  width: 1px;
+  background: var(--rule-strong);
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 32px;
+  padding: 20px 0;
+  align-items: start;
+  position: relative;
+}
+
+.timeline-row::before {
+  content: '';
+  position: absolute;
+  left: 86px;
+  top: 30px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--clay);
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 4px var(--cream);
+}
+
+.timeline-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  padding-top: 4px;
+}
+
+.timeline-content h4 {
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 24, 'wght' 500;
+}
+
+.timeline-content p {
+  font-size: 14.5px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ─── PREP TIMELINE (working backward) ──────────────── */
+
+.prep-grid {
+  display: grid;
+  gap: 0;
+}
+
+.prep-block {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 48px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.prep-block:last-child { border-bottom: none; }
+
+.prep-when {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.prep-when-label {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 24, 'wght' 450;
+  font-size: 20px;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.prep-when-out {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+
+.prep-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.prep-content li {
+  font-size: 15px;
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+  color: var(--ink-soft);
+}
+
+.prep-content li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--clay);
+  font-weight: 500;
+}
+
+/* ─── CARD GRIDS ────────────────────────────────────── */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 28px;
+  border-radius: 4px;
+}
+
+.card-icon {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--clay);
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.card h4 {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 17px;
+  color: var(--ink);
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 24, 'wght' 500;
+  margin-bottom: 12px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li {
+  font-size: 14px;
+  line-height: 1.55;
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 8px;
+  color: var(--ink-soft);
+}
+
+.card li::before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  color: var(--clay);
+  font-weight: bold;
+}
+
+/* ─── ROLES TABLE ───────────────────────────────────── */
+
+.roles-table {
+  margin: 32px 0;
+  border-top: 1px solid var(--rule-strong);
+}
+
+.role-row {
+  display: grid;
+  grid-template-columns: 200px 200px 1fr;
+  gap: 32px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: start;
+}
+
+.role-name {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 24, 'wght' 500;
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.role-who {
+  font-size: 14px;
+  color: var(--ink-muted);
+  padding-top: 2px;
+}
+
+.role-desc {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+/* ─── QUESTION BANK ─────────────────────────────────── */
+
+.question-list {
+  margin: 32px 0;
+}
+
+.question-item {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.question-item:last-child { border-bottom: none; }
+
+.question-header {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.question-round {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clay);
+  padding: 4px 10px;
+  background: rgba(184, 85, 46, 0.08);
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.question-text {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 24, 'wght' 400;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.question-answers {
+  font-size: 14px;
+  color: var(--ink-muted);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.question-answers strong {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+/* ─── FAST CASH FEATURE ─────────────────────────────── */
+
+.feature-block {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 64px 56px;
+  margin: 64px 0;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-block::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(184, 85, 46, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.feature-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 16px;
+}
+
+.feature-block h3 {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 144, 'wght' 380;
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  margin-bottom: 24px;
+  max-width: 700px;
+}
+
+.feature-block h3 em {
+  font-style: italic;
+  font-variation-settings: 'opsz' 144, 'wght' 320, 'SOFT' 100;
+  color: var(--ochre);
+}
+
+.feature-block p {
+  color: rgba(244, 239, 230, 0.85);
+  font-size: 16px;
+  max-width: 700px;
+  position: relative;
+}
+
+.prize-tiers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.prize-tier {
+  background: rgba(244, 239, 230, 0.05);
+  border: 1px solid rgba(244, 239, 230, 0.15);
+  padding: 24px;
+  border-radius: 4px;
+}
+
+.prize-amount {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 144, 'wght' 380;
+  font-size: 40px;
+  color: var(--ochre);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.prize-condition {
+  font-size: 13px;
+  color: rgba(244, 239, 230, 0.7);
+  line-height: 1.5;
+}
+
+/* ─── AWARDS STACK ──────────────────────────────────── */
+
+.awards-stack {
+  margin: 32px 0;
+  border-left: 2px solid var(--rule-strong);
+  padding-left: 32px;
+}
+
+.award-tier {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.award-tier:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.award-tier h4 {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 17px;
+  color: var(--ink);
+  margin-bottom: 8px;
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 24, 'wght' 500;
+}
+
+.award-tier p, .award-tier li {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.award-tier ul {
+  list-style: none;
+  padding: 0;
+}
+
+.award-tier li {
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.award-tier li::before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  color: var(--clay);
+  font-weight: bold;
+}
+
+/* ─── RISK TABLE ────────────────────────────────────── */
+
+.risk-grid {
+  display: grid;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin: 32px 0;
+}
+
+.risk-row {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 32px;
+  padding: 24px 28px;
+  background: var(--cream);
+  align-items: start;
+}
+
+.risk-name {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 24, 'wght' 500;
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.risk-mitigation {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+/* ─── COMPARISON ────────────────────────────────────── */
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 48px 0;
+}
+
+.compare-card {
+  background: var(--paper);
+  padding: 40px;
+  border-radius: 4px;
+  border-top: 4px solid var(--clay);
+}
+
+.compare-card.secondary {
+  border-top-color: var(--sage);
+}
+
+.compare-card h4 {
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 24, 'wght' 500;
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+
+.compare-row {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.compare-row:last-child { border-bottom: none; }
+
+.compare-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.compare-value {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+/* ─── PATH FORWARD ──────────────────────────────────── */
+
+.path-list {
+  margin: 32px 0;
+  counter-reset: path;
+}
+
+.path-item {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--rule);
+  counter-increment: path;
+}
+
+.path-item:last-child { border-bottom: none; }
+
+.path-item::before {
+  content: counter(path, decimal-leading-zero);
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 144, 'wght' 350;
+  font-style: italic;
+  font-size: 40px;
+  color: var(--clay);
+  line-height: 1;
+}
+
+.path-content h4 {
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 24, 'wght' 500;
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.path-content p {
+  font-size: 14.5px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ─── PULL QUOTE ────────────────────────────────────── */
+
+.pull-quote {
+  background: var(--cream-deep);
+  padding: 40px 48px;
+  margin: 48px 0;
+  border-left: 3px solid var(--clay);
+  border-radius: 0 4px 4px 0;
+}
+
+.pull-quote-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 12px;
+}
+
+.pull-quote p {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 36, 'wght' 380;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--ink);
+  font-style: italic;
+  margin: 0;
+}
+
+/* ─── INFO CALLOUT ──────────────────────────────────── */
+
+.callout {
+  display: flex;
+  gap: 20px;
+  padding: 24px 28px;
+  background: rgba(184, 85, 46, 0.06);
+  border-radius: 4px;
+  margin: 24px 0;
+}
+
+.callout-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clay-deep);
+  font-weight: 600;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.callout p {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--ink-soft);
+}
+
+/* ─── FOOTER ────────────────────────────────────────── */
+
+.footer {
+  padding: 48px 0;
+  text-align: center;
+  background: var(--ink);
+  color: rgba(244, 239, 230, 0.6);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.footer span { color: var(--ochre); }
+
+/* ─── ANIMATIONS ────────────────────────────────────── */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1, .hero-eyebrow, .hero-meta {
+  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+.hero-eyebrow { animation-delay: 0.1s; }
+.hero h1 { animation-delay: 0.2s; }
+.hero-meta { animation-delay: 0.4s; }
+
+/* ─── RESPONSIVE ────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+  .hero { padding: 48px 0 64px; }
+  section { padding: 64px 0; }
+  .why-grid { grid-template-columns: 1fr; }
+  .compare-grid { grid-template-columns: 1fr; }
+  .prep-block { grid-template-columns: 1fr; gap: 12px; }
+  .role-row { grid-template-columns: 1fr; gap: 8px; }
+  .risk-row { grid-template-columns: 1fr; gap: 8px; }
+  .timeline::before { left: 60px; }
+  .timeline-row { grid-template-columns: 60px 1fr; gap: 20px; }
+  .timeline-row::before { left: 58px; }
+  .feature-block { padding: 40px 28px; }
+}
+
+@media print {
+  body { background: white; }
+  .hero, section { page-break-inside: avoid; }
+}
+
+/* ─── SAGE THEME (Spin the Block) ───────────────────── */
+
+.sage-section {
+  /* Background color is set inline on the section element for full-width coverage */
+}
+
+.sage-section .sub-header-num { color: var(--sage); }
+
+.sage-section .sub-header h3 { color: var(--ink); }
+
+.sage-section .sub-header {
+  border-bottom-color: rgba(90, 107, 77, 0.25);
+}
+
+.sage-section .timeline-row::before {
+  background: var(--sage);
+}
+
+.sage-section .timeline-content h4 {
+  font-size: 19px;
+  font-variation-settings: 'opsz' 24, 'wght' 600;
+  color: var(--sage);
+}
+
+.sage-section .callout {
+  background: rgba(90, 107, 77, 0.06);
+  border-left-color: var(--sage);
+}
+
+.sage-section .callout-tag { color: var(--sage); }
+
+.sage-section .card {
+  border-top: 2px solid var(--sage);
+}
+
+.sage-section .card-icon { color: var(--sage); }
+
+.sage-section .question-round {
+  color: var(--sage);
+  background: rgba(90, 107, 77, 0.08);
+}
+
+.sage-section .risk-row {
+  background: var(--cream);
+}
+
+.sage-section .risk-row:nth-child(odd) {
+  background: rgba(90, 107, 77, 0.06);
+}
+
+.sage-section .feature-block {
+  background: #3d4a34;
+}
+
+.sage-section .feature-block strong {
+  color: var(--ochre);
+}
+
+.sage-section .feature-eyebrow {
+  color: var(--sage-soft);
+}
+
+.sage-section h4 {
+  color: var(--sage);
+}
+
+.sage-section .prep-when-out {
+  color: var(--sage);
+}
+
+.sage-section .prep-content li::before {
+  color: var(--sage);
+}
+
+.sage-section .compare-card {
+  border-top-color: var(--sage);
+}
+
+.sage-section .compare-card.secondary {
+  border-top-color: var(--sage);
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">TMO Event Plan · Draft 02 · Internal</div>
+    <h1>A sponsored lunch that earns <em>recall</em>, not just attendance.</h1>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Event</span>
+        <span class="hero-meta-value">NACCED 51st Annual Meeting</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">When</span>
+        <span class="hero-meta-value">October 5–8, 2026</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Where</span>
+        <span class="hero-meta-value">Baltimore, Maryland</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Window</span>
+        <span class="hero-meta-value">90-minute lunch</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ CONTEXT ═══ -->
+<section>
+  <div class="container">
+    <span class="section-num">§ 01 — Strategic Context</span>
+    <h2 class="section-title">Lunch is for <em>fun and recall</em>. The keynote is for the product.</h2>
+    <p class="section-lede">TMO's keynote sponsorship handles product education and promotion. This lunch handles affinity — a memorable, fun, interactive experience that leaves the room thinking: <em>"those TMO folks actually understand our world — and we had a great time."</em></p>
+
+    <div class="context-grid">
+      <div class="context-cell">
+        <h4>Audience</h4>
+        <p>150–300 attendees, predominantly county community development directors, program managers, grants & compliance leads. Small share of city housing departments, CDFIs, nonprofits.</p>
+      </div>
+      <div class="context-cell">
+        <h4>Brand Outcome</h4>
+        <p>"TMO actually understands our world — and we had a great time with them." Fun first, credibility earned along the way.</p>
+      </div>
+      <div class="context-cell">
+        <h4>Time</h4>
+        <p>~75 minutes of programming inside a 90-minute lunch window.</p>
+      </div>
+      <div class="context-cell">
+        <h4>Keynote ≠ Lunch</h4>
+        <p>The keynote handles product education and promotion. The lunch handles fun, brand affinity, and recall. They complement — not compete.</p>
+      </div>
+    </div>
+
+    <!-- TEAM SIZING -->
+    <div class="sub-header" style="margin-top: 64px;">
+      <span class="sub-header-num">1.1</span>
+      <h3>Team Sizing & Table Configuration</h3>
+    </div>
+
+    <p>Tables are teams. <strong>Aim for 6–8 people per table.</strong> That's the range where everyone can contribute in the 30–60 second discussion windows, the captain coordinates rather than dictates, and quieter voices still have room. It also matches the standard banquet round configuration most hotels set by default. Below 5 per table and discussion feels thin; above 9 and people start checking out.</p>
+
+    <h4 style="margin-top: 32px;">Headcount-to-Table Mapping</h4>
+
+    <div class="risk-grid" style="margin-top: 16px;">
+      <div class="risk-row">
+        <div class="risk-name">60–80 attendees</div>
+        <div class="risk-mitigation"><strong>Tables of 6 → 10–13 teams.</strong> Ideal range for both formats.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">80–120 attendees</div>
+        <div class="risk-mitigation"><strong>Tables of 6–8 → 10–20 teams.</strong> Either table size works. Fewer teams = easier scoring logistics.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">120–180 attendees</div>
+        <div class="risk-mitigation"><strong>Tables of 8 → 15–22 teams.</strong> Keep it under ~22 teams so runners can scan paddles and the leaderboard stays meaningful.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">180+ attendees</div>
+        <div class="risk-mitigation"><strong>Tables of 8, capped at ~25 teams.</strong> Beyond that, consider capping or splitting rooms.</div>
+      </div>
+    </div>
+
+    <p style="margin-top: 24px;">Uneven tables are fine — scoring is per-table, not per-person. 95 attendees? Do 11 tables of 8 and 1 table of 7.</p>
+
+    <div class="pull-quote" style="margin-top: 32px;">
+      <div class="pull-quote-label">What we need from NACCED</div>
+      <p>Estimated attendance for the lunch specifically (not the whole conference — some people will skip), and the venue's default banquet round size. If the hotel sets 10-tops, seat 8 per table and leave 2 empty chairs for comfort.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONCEPT A ═══ -->
+<section>
+  <div class="container">
+    <span class="section-num">§ 02 — Primary Concept</span>
+
+    <div class="concept-banner">
+      <span class="concept-tag">Primary</span>
+      <h2>The <em>Funding</em> Feud</h2>
+    </div>
+
+    <!-- HOW THE GAME WORKS -->
+    <div class="sub-header" style="margin-top: 32px;">
+      <span class="sub-header-num">2.1</span>
+      <h3>How the Game Works — The Big Picture</h3>
+    </div>
+
+    <p><strong>Family Feud</strong> is one of the most recognizable game shows in television history, running since 1976. The premise is simple: two teams compete to guess the most popular answers to survey questions. A host reads a question like "Name something people forget to bring on vacation," and the teams race to guess what the most common survey responses were. The top answer earns the most points, the second-most-popular answer earns fewer, and so on down the board. If a team can't guess the remaining answers, the other team gets a chance to "steal" all the points with a single correct guess. The show's energy comes from the tension between what you <em>think</em> people said and what they <em>actually</em> said — and from the theatrical reveal of each answer on the board.</p>
+
+    <div class="callout">
+      <span class="callout-tag">Our adaptation</span>
+      <p>Instead of celebrity families competing on a TV set, <strong>every table in the room is a team competing simultaneously.</strong> Instead of survey answers from random strangers, the answers come from community development professionals — both from a pre-event survey of NACCED members and TMO clients, and from <strong>live polling in the room during the first 10 minutes.</strong> Attendees scan a QR code, answer questions about their own work, and those responses become the game's answer board. When the emcee reveals the top answers, attendees are seeing what their own peers — including people sitting right next to them — actually said. That "wait, here's what I picked — what did you say?" moment is what makes this format land. Tables hold up dry-erase paddles with their guesses, and the closer their guess is to the most popular answer, the more points they earn. The game builds to a championship finale called <strong>"Fast Cash for Community"</strong> — the top two tables send players to the stage for a rapid-fire head-to-head round, competing for a charitable donation in their organization's name.</p>
+    </div>
+
+    <p class="concept-overview" style="margin-top: 32px;">A Family Feud–style game where tables compete to guess the most common answers from a survey of community development professionals — collected <strong>live in the room during the opening 10 minutes</strong> via a mobile QR poll, with a pre-event survey running in parallel as internal preparation. The displayed answer board reflects what the room itself said.</p>
+
+    <h3>Why this format wins for this audience</h3>
+
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="why-num">01</span>
+        <div class="why-content">
+          <h4>Eat-and-play friendly</h4>
+          <p>No complex scenarios to read mid-bite. Simple "name something that…" prompts.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="why-num">02</span>
+        <div class="why-content">
+          <h4>Every table plays every round</h4>
+          <p>No spectator tables, no waiting your turn. Simultaneous paddle submissions.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="why-num">03</span>
+        <div class="why-content">
+          <h4>Live-data theatre</h4>
+          <p>Watching the room's answers populate on screen in real time is genuinely energizing. Attendees see their own input become the game.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="why-num">04</span>
+        <div class="why-content">
+          <h4>Tech-forward signal</h4>
+          <p>Polished, mobile-first polling reinforces TMO as a modern technology company — not a legacy vendor.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="why-num">05</span>
+        <div class="why-content">
+          <h4>Surfaces TMO's value pillars</h4>
+          <p>Questions are designed so answers map to spreadsheets, compliance drag, audit risk, and capacity crunch — without ever doing a feature pitch.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="why-num">06</span>
+        <div class="why-content">
+          <h4>Built-in lead surface</h4>
+          <p>Final poll screen offers an opt-in to receive the full survey results. Higher-quality contact list than any badge scan.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MECHANICS -->
+    <div class="sub-header">
+      <span class="sub-header-num">2.2</span>
+      <h3>Game Mechanics</h3>
+    </div>
+
+    <p>Every table is a team. Each table elects a captain who submits the official paddle answer.</p>
+
+    <div class="callout">
+      <span class="callout-tag">The handoff</span>
+      <p>Between 0:10–0:20, the live poll captures the room's answers to all 5–6 game questions in sequence. By round 1 (0:25), the producer has finalized top-5 answer boards ready to reveal. Attendees see the response visual fill in real time during polling, but final top-5 boards aren't shown until each round's reveal.</p>
+    </div>
+
+    <h4 style="margin-top: 32px;">A Standard Round</h4>
+    <ol style="margin: 16px 0 24px 24px; color: var(--ink-soft); line-height: 1.7;">
+      <li>Emcee reads the question: <em>"Earlier you all told us… let's see what your room said."</em></li>
+      <li>Tables get 60 seconds to discuss and write what they think the top answer was</li>
+      <li>All tables hold up paddles simultaneously — runners and producer scan and confirm matches</li>
+      <li>Emcee reveals the room's #1 first (10 pts), then #2 (8) #3 (6) #4 (4) #5 (2)</li>
+      <li>"Field Insight" spot prize for the most creative unranked answer — keeps energy up</li>
+      <li>Emcee delivers a 30-second insight per round, comparing the room's data to the pre-event national data — this is where TMO's field-wide perspective gets earned</li>
+    </ol>
+
+    <p><strong>Pacing rule:</strong> No round runs over 8 minutes. Producer signals emcee at the 6-minute mark.</p>
+
+    <!-- ROUND ANATOMY -->
+    <div class="sub-header">
+      <span class="sub-header-num">2.3</span>
+      <h3>Anatomy of an 8-Minute Round</h3>
+    </div>
+
+    <p style="margin-bottom: 24px;">The 60 seconds of active answering is only one slice. The rest is what makes it a game show rather than a quiz — setup, reveals, reactions, running narrative. This is where the emcee earns their fee.</p>
+
+    <div class="timeline">
+      <div class="timeline-row">
+        <div class="timeline-time">0:00 – 0:30</div>
+        <div class="timeline-content">
+          <h4>Setup</h4>
+          <p>Emcee sets up the question with a story or framing.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">0:30 – 1:30</div>
+        <div class="timeline-content">
+          <h4>Active answering · 60 seconds</h4>
+          <p>Tables discuss and write their answer.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">1:30 – 1:45</div>
+        <div class="timeline-content">
+          <h4>Paddles up</h4>
+          <p>Runners scan and call out matches to the producer.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">1:45 – 3:45</div>
+        <div class="timeline-content">
+          <h4>Reveal #1–#5</h4>
+          <p>Each reveal in sequence with sound effects, point announcements, crowd reactions.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">3:45 – 4:00</div>
+        <div class="timeline-content">
+          <h4>Steal trigger check</h4>
+          <p>If 2+ answers went unrevealed, emcee calls "Steal!" Otherwise skipped.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">4:00 – 5:15</div>
+        <div class="timeline-content">
+          <h4>Steal mechanic</h4>
+          <p>Plays out if triggered (see 2.7), or collapses into buffer time.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">5:15 – 6:00</div>
+        <div class="timeline-content">
+          <h4>Emcee insight · 30 seconds</h4>
+          <p>Compares room data to pre-event national data.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">6:00 – 6:45</div>
+        <div class="timeline-content">
+          <h4>"Field Insight" spot prize</h4>
+          <p>Recognition for a creative unranked answer.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">6:45 – 7:30</div>
+        <div class="timeline-content">
+          <h4>Leaderboard update</h4>
+          <p>Emcee narrates standings.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">7:30 – 8:00</div>
+        <div class="timeline-content">
+          <h4>Transition</h4>
+          <p>Tease the next question.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="callout-tag">Built-in flex</span>
+      <p>If a round is running hot (laughs, good banter), the emcee rides it longer; if flat, they cut to the leaderboard transition early. The 6-minute producer signal is the wrap cue, not a hard cap.</p>
+    </div>
+
+    <!-- STEAL MECHANIC -->
+    <div class="sub-header">
+      <span class="sub-header-num">2.4</span>
+      <h3>The Steal Mechanic · Two Options for Internal Decision</h3>
+    </div>
+
+    <p>A core feature of Family Feud is the steal: when one team can't get all the answers, the other team gets a chance. In a multi-table format with 20+ teams, "give the points to the other team" doesn't have an obvious target, so we've designed two adaptations. Both preserve the steal's strategic purpose — reward attention, punish missing the obvious.</p>
+
+    <div class="callout">
+      <span class="callout-tag">Common trigger</span>
+      <p>The steal activates only if <strong>2 or more</strong> of the top-5 answers go unrevealed after the main reveal phase. Rounds where the room nails the top answers feel different from rounds where they miss — emcee simply says "no steal needed, you got them all" and moves on. Unpredictability is part of the fun.</p>
+    </div>
+
+    <div class="compare-grid" style="margin-top: 32px;">
+      <div class="compare-card">
+        <h4>Option A · The Wildcard Steal <span style="color: var(--clay); font-size: 12px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.15em; text-transform: uppercase; vertical-align: middle; margin-left: 8px;">Recommended</span></h4>
+        <div class="compare-row">
+          <span class="compare-label">How it works</span>
+          <div class="compare-value">When triggered, all tables get 30 seconds to write down ONE additional guess. Any table that names a remaining unrevealed answer earns 5 bonus points. Multiple tables can score on the same steal.</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Pros</span>
+          <div class="compare-value">Every table participates, not just one. Fast. Rewards tables who were close in the main round. Creates a second wave of energy mid-round.</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Cons</span>
+          <div class="compare-value">Less dramatic than head-to-head. "Stealing" feeling is softer because the room isn't taking from a specific opponent.</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Tone</span>
+          <div class="compare-value">"Did your table catch a wildcard?" Collegial.</div>
+        </div>
+      </div>
+
+      <div class="compare-card secondary">
+        <h4>Option B · Steal from the Leader <span style="color: var(--sage); font-size: 12px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.15em; text-transform: uppercase; vertical-align: middle; margin-left: 8px;">Alternate</span></h4>
+        <div class="compare-row">
+          <span class="compare-label">How it works</span>
+          <div class="compare-value">When triggered, the current 1st-place table sits out. All other tables get 30 seconds to submit a guess. Correct guesses score double points (10) AND siphon 5 points from the leader's total.</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Pros</span>
+          <div class="compare-value">Dramatic. Real underdog moment. Closest to the original show — points actually move between teams.</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Cons</span>
+          <div class="compare-value">Punishes the table playing well. Can feel arbitrary to county staff who take competition seriously. Same leader round after round means the same table keeps getting targeted.</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Tone</span>
+          <div class="compare-value">"The leaders are vulnerable." Competitive.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-quote" style="margin-top: 32px;">
+      <div class="pull-quote-label">Decision lens</div>
+      <p>Given this audience — county government professionals, peer environment, mission-driven — Option A is likely the safer and more on-brand choice. Option B would create more memorable highs and lows if the room embraces the competition. Worth a quick gut check with NACCED on what will land best with their members.</p>
+    </div>
+
+    <!-- QUESTION BANK -->
+    <div class="sub-header">
+      <span class="sub-header-num">2.5</span>
+      <h3>Question Bank · Options by Round</h3>
+    </div>
+
+    <p style="margin-bottom: 24px;">3–4 question options per round so you can pick the strongest ones during prep, swap if a question lands flat in rehearsal, or adjust based on pre-event survey results. Designed so top answers naturally surface themes TMO addresses — without mentioning TMO.</p>
+
+    <h4 style="margin-top: 32px;">Round 1 Options · Warm-up — broad, accessible, gets the room talking</h4>
+    <div class="question-list">
+      <div class="question-item">
+        <div class="question-text">"What's the #1 reason a good affordable housing project stalls?"</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> Environmental review delays · Funding gaps · Staff capacity & turnover · Procurement · Permitting · Community input timelines</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"Name the biggest challenge your department faces right now."</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> Staffing / turnover · Funding uncertainty · Reporting burden · Rising construction costs · Increasing demand · Political pressure</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"What's the first thing you think about on Monday morning at work?"</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> Email backlog · Deadlines · Staff meetings · Coffee · What fires need putting out · Project status updates</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"Name something every community development office has too much of."</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> Paperwork · Meetings · Spreadsheets · Audits · Acronyms · Compliance requirements</div>
+      </div>
+    </div>
+
+    <h4 style="margin-top: 32px;">Round 2 Options · Operational — how teams work day-to-day</h4>
+    <div class="question-list">
+      <div class="question-item">
+        <div class="question-text">"What does your team rely on most to track loan portfolios?"</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> Spreadsheets · Loan management software · Home-grown / legacy systems · Paper files · ERP / finance system · Shared drives</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"Name a tool or system your team uses every single day."</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> Excel · Email / Outlook · IDIS · Shared drives / SharePoint · Financial software · Project tracker</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"What's the first place you look when a borrower calls with a question?"</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> The file / folder · Spreadsheet · Loan system · Ask a colleague · Email history · Notes</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"Name something your team still does manually that should be automated."</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> Data entry · Report generation · Payment tracking · Document collection · Compliance checks · Reminder follow-ups</div>
+      </div>
+    </div>
+
+    <h4 style="margin-top: 32px;">Round 3 Options · Compliance — the shared pain of federal programs</h4>
+    <div class="question-list">
+      <div class="question-item">
+        <div class="question-text">"Top time-wasters in CDBG/HOME administration"</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> Manual reporting / IDIS · Document collection · Recapture calculations · Multi-system reconciliation · Subrecipient follow-up · Davis-Bacon documentation</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"Name something that keeps you up at night before an audit."</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> Missing documentation · Income verification gaps · Timeliness issues · Expenditure deadlines · Subrecipient files · Environmental review paperwork</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"What's the most frustrating part of the IDIS reporting process?"</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> Data entry · Slow system · Error corrections · Reconciling with internal records · Timing / deadlines · Training new staff on it</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"Name a compliance requirement that takes more time than it should."</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> Environmental review · Davis-Bacon · Income documentation · Draw-down reconciliation · Monitoring reports · Program income tracking</div>
+      </div>
+    </div>
+
+    <h4 style="margin-top: 32px;">Round 4 Options · Fun / Lighter — gives the room a laugh</h4>
+    <div class="question-list">
+      <div class="question-item">
+        <div class="question-text">"What's the most over-used phrase in a community development meeting?"</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> "Pipeline" · "Stakeholder engagement" · "Capacity building" · "Affordable" · "Pre-development" · "Best practices"</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"Name something you'd never say out loud in a HUD monitoring visit."</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> "We're behind on spending" · "I'm not sure" · "We lost that file" · "Our system is a spreadsheet" · "We've always done it this way" · "Can you come back next month?"</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"Name a HUD acronym that confuses everyone outside this room."</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> IDIS · CAPER · AMI · LMI · CHDO · NOFA · TBRA · HTF</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"What's the most surprising thing about working in community development?"</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> How long projects take · The amount of paperwork · How much you learn · The politics · How rewarding it is · How small the teams are</div>
+      </div>
+    </div>
+
+    <h4 style="margin-top: 32px;">Round 5 Options · Forward-looking — where the field is heading</h4>
+    <div class="question-list">
+      <div class="question-item">
+        <div class="question-text">"If your team could automate ONE thing tomorrow, what would it be?"</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> Reporting / IDIS uploads · Payment posting · Document generation · Eligibility checking · Reminders & deadlines · Compliance monitoring</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"What would make the biggest difference for your department in the next 2 years?"</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> More staff · Better technology · Simplified reporting · More funding · Cross-department collaboration · Training</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"Name one thing high-performing counties do that you wish your team did."</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> Standardized processes · Real-time tracking · Proactive communication · Regular training · Audit-ready documentation · Centralized systems</div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"What's the #1 thing you'd change about how your county manages housing programs?"</div>
+        <div class="question-answers"><strong>Likely top answers:</strong> Better technology / systems · More staff · Streamlined processes · Less manual work · Better data visibility · More training</div>
+      </div>
+    </div>
+
+    <h4 style="margin-top: 32px;">Backup Questions · swap in if any round falls flat</h4>
+    <div class="question-list">
+      <div class="question-item">
+        <div class="question-text">"What does a clean audit feel like?"</div>
+        <div class="question-answers"><em>Open-ended, fun — gets laughs</em></div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"Name the best thing about working in community development"</div>
+        <div class="question-answers"><em>Positive energy, good for late-game if the room needs a lift</em></div>
+      </div>
+      <div class="question-item">
+        <div class="question-text">"Name something you wish HUD understood about your day-to-day work"</div>
+        <div class="question-answers"><em>Gets strong reactions — use if the room is engaged and competitive</em></div>
+      </div>
+    </div>
+
+    <!-- FAST CASH FEATURE -->
+    <div class="feature-block">
+      <div class="feature-eyebrow">2.6 · The Finale</div>
+      <h3>Fast Cash <em>for Community</em></h3>
+      <p style="margin-bottom: 24px;">The Fast Money equivalent — the moment that turns a fun lunch into something attendees actually tell their colleagues about.</p>
+      <p style="margin-bottom: 24px;">The top 2 tables each send a captain + one teammate to the stage. Player 1 goes first while Player 2 wears noise-canceling headphones offstage. Five rapid-fire questions, 25 seconds each. Player 2 returns, gets the same five with 30 seconds each, can't repeat Player 1's answers.</p>
+      <p style="margin-bottom: 8px;"><strong style="color: var(--ochre);">The brand moment:</strong> Players don't win for themselves. They play on behalf of their organization. TMO donates <strong>$1,000 to a community development charity</strong> in the winning org's name. (Exact amount and parameters to be cleared with both NACCED and TMO to ensure no issues with facilitation or any requirements to be aware of.)</p>
+
+      <div class="prize-tiers">
+        <div class="prize-tier">
+          <div class="prize-amount">$1,000</div>
+          <div class="prize-condition">Charitable donation in the winning organization's name</div>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>Why this works:</strong> Ethically bulletproof for government attendees (they're not personally receiving anything). Directly on-mission. Far more memorable than gift cards. A county director returning home with "we won $1,000 for our local Habitat" makes them — and TMO — look excellent internally. Generates LinkedIn-worthy content.</p>
+
+    <h4 style="margin-top: 32px;">Pre-approved Charity List</h4>
+    <p>Habitat for Humanity (local affiliate of winner's county) · National Low Income Housing Coalition · Enterprise Community Partners · LISC · A specific community-chosen recipient (TMO approves in advance up to the maximum)</p>
+
+    <!-- AWARDS -->
+    <div class="sub-header">
+      <span class="sub-header-num">2.7</span>
+      <h3>Awards & Prizes · Full Stack</h3>
+    </div>
+
+    <div class="awards-stack">
+      <div class="award-tier">
+        <h4>Every attendee — walking in / out</h4>
+        <ul>
+          <li>Branded TMO conference swag (notebook, pen, or tote — confirm NACCED allowances)</li>
+          <li>Education-led leave-behind one-pager summarizing combined survey findings</li>
+          <li>Email follow-up to poll opt-ins with full results write-up</li>
+        </ul>
+      </div>
+      <div class="award-tier">
+        <h4>Per-round spot prizes — 1–2 per round</h4>
+        <ul>
+          <li>"Field Insight" award — branded item (~$15–$25) for creative answers</li>
+          <li>"Bold Play" award — for tables that took a swing</li>
+        </ul>
+      </div>
+      <div class="award-tier">
+        <h4>Round-winning tables</h4>
+        <ul>
+          <li>"Round Champion of [topic]" title — bragging rights, small trophy or pin for captain</li>
+        </ul>
+      </div>
+      <div class="award-tier">
+        <h4>Top 2 tables advancing to Fast Cash</h4>
+        <ul>
+          <li>Each member gets higher-tier swag (water bottle, hoodie — confirm value caps)</li>
+          <li>Photo opp, named in post-event recap</li>
+        </ul>
+      </div>
+      <div class="award-tier">
+        <h4>Grand prize — Fast Cash winners</h4>
+        <ul>
+          <li>$1,000 charitable donation in winning org's name (exact parameters TBD with NACCED and TMO)</li>
+          <li>Framed certificate sent to winning org within 2 weeks</li>
+          <li>Feature in TMO post-event LinkedIn / blog content (with permission)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ROLES -->
+    <div class="sub-header">
+      <span class="sub-header-num">2.8</span>
+      <h3>Roles & Staffing</h3>
+    </div>
+
+    <div class="roles-table">
+      <div class="role-row">
+        <div class="role-name">Emcee</div>
+        <div class="role-who">Hired or recruited</div>
+        <div class="role-desc">Hosts, narrates, riffs, connects answers back to attendee work, drives QR adoption in the opening 10 minutes</div>
+      </div>
+      <div class="role-row">
+        <div class="role-name">Producer</div>
+        <div class="role-who">TMO marketing / events lead</div>
+        <div class="role-desc">Runs game board, manages live polling tool (opens/closes questions, controls screen-share), scoring, timing, AV troubleshooting</div>
+      </div>
+      <div class="role-row">
+        <div class="role-name">Floor runners (×2)</div>
+        <div class="role-who">TMO team or temp staff</div>
+        <div class="role-desc">Captures table paddle answers, roams during polling window to help anyone struggling with QR or app, manages Fast Cash stage</div>
+      </div>
+      <div class="role-row">
+        <div class="role-name">Scorekeeper</div>
+        <div class="role-who">TMO ops / admin</div>
+        <div class="role-desc">Maintains running leaderboard, breaks ties</div>
+      </div>
+      <div class="role-row">
+        <div class="role-name">Photographer</div>
+        <div class="role-who">Vendor or TMO</div>
+        <div class="role-desc">Captures room shots + winner moment for post-event marketing</div>
+      </div>
+      <div class="role-row">
+        <div class="role-name">Greeter</div>
+        <div class="role-who">TMO sales / SDR</div>
+        <div class="role-desc">Light touch at door, points attendees to the QR code on table tents. No sales pitch.</div>
+      </div>
+    </div>
+
+    <!-- RUN OF SHOW -->
+    <div class="sub-header">
+      <span class="sub-header-num">2.9</span>
+      <h3>Run of Show · 90 minutes</h3>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-row">
+        <div class="timeline-time">0:00 – 0:10</div>
+        <div class="timeline-content">
+          <h4>Doors, lunch service, live poll opens</h4>
+          <p>Branded table tents with QR codes prominently displayed. Emcee greets the room and directs attention to the QR code immediately. Walk-in music.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">0:10 – 0:20</div>
+        <div class="timeline-content">
+          <h4>Welcome + live polling window</h4>
+          <p>"Scan the QR code — every answer feeds the game you're about to play." Live response visual fills on screen (word cloud or bar chart aggregating in real time). Two reminder pushes to drive completion.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">0:20 – 0:25</div>
+        <div class="timeline-content">
+          <h4>Rules + warm-up question</h4>
+          <p>Polling closes. Quick walkthrough of how rounds work using one sample question played out loud.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">0:25 – 1:05</div>
+        <div class="timeline-content">
+          <h4>Five main rounds · ~8 min each</h4>
+          <p>One question per round. Answer board reflects the room's live responses. Running leaderboard updated between rounds.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">1:05 – 1:18</div>
+        <div class="timeline-content">
+          <h4>Fast Cash for Community — Finale</h4>
+          <p>Top 2 tables advance. Two players from each play head-to-head for a charitable donation in their organization's name.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">1:18 – 1:25</div>
+        <div class="timeline-content">
+          <h4>Awards, donation announcement, group photo</h4>
+          <p>Brief, energetic. Swag at exits. Reminder of the "send me the full results" opt-in.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">1:25 – 1:30</div>
+        <div class="timeline-content">
+          <h4>Buffer / overflow</h4>
+          <p>Always build in five minutes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREP TIMELINE -->
+    <div class="sub-header">
+      <span class="sub-header-num">2.10</span>
+      <h3>Preparation · Working Backward from October</h3>
+    </div>
+
+    <div class="prep-grid">
+      <div class="prep-block">
+        <div class="prep-when">
+          <span class="prep-when-label">Foundation</span>
+          <span class="prep-when-out">10–12 weeks out</span>
+        </div>
+        <div class="prep-content">
+          <ul>
+            <li><strong>Confirm with NACCED:</strong> format approval, permission to send pre-event survey, AV setup (dual screens preferred), room layout, walk-in music allowances</li>
+            <li><strong>Confirm room connectivity</strong> — both Wifi and cellular — directly with the hotel. Critical for live polling.</li>
+            <li><strong>Lock the emcee.</strong> Hired pro ($2K–$5K) or recruited industry voice ($1K–$3K honorarium). The format depends on this person. Don't use a TMO leader playing host.</li>
+            <li><strong>Select the polling platform</strong> — Slido or Mentimeter, event-tier plan (~$500–$2K). Skip custom-built for v1.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="prep-block">
+        <div class="prep-when">
+          <span class="prep-when-label">Strategy</span>
+          <span class="prep-when-out">8–10 weeks out</span>
+        </div>
+        <div class="prep-content">
+          <ul>
+            <li><strong>Survey strategy.</strong> Two surveys, two purposes: pre-event (internal prep + safety net), live in-room (the game's actual data)</li>
+            <li><strong>Draft 5–6 game questions + 1 warm-up</strong> — same set used for both</li>
+            <li><strong>Confirm prize structure</strong> with TMO finance/legal, especially the charitable donation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="prep-block">
+        <div class="prep-when">
+          <span class="prep-when-label">Build</span>
+          <span class="prep-when-out">6 weeks out</span>
+        </div>
+        <div class="prep-content">
+          <ul>
+            <li><strong>Launch pre-event survey</strong> — NACCED members (primary), TMO clients (secondary), LinkedIn community channels (tertiary). Target 50+ responses.</li>
+            <li><strong>Build the live poll</strong> in Slido or Menti — branded, response visuals configured, email opt-in on final screen</li>
+          </ul>
+        </div>
+      </div>
+      <div class="prep-block">
+        <div class="prep-when">
+          <span class="prep-when-label">Refine</span>
+          <span class="prep-when-out">4 weeks out</span>
+        </div>
+        <div class="prep-content">
+          <ul>
+            <li>Compile pre-event answer rankings for emcee prep (not for display)</li>
+            <li>Send NACCED a final activity description</li>
+            <li>Order branded materials — <strong>table tents with prominent QR codes on both sides</strong></li>
+          </ul>
+        </div>
+      </div>
+      <div class="prep-block">
+        <div class="prep-when">
+          <span class="prep-when-label">Lock</span>
+          <span class="prep-when-out">3 weeks out</span>
+        </div>
+        <div class="prep-content">
+          <ul>
+            <li>Pre-event survey closes. Brief emcee on the insight cards for each round.</li>
+            <li>Pre-screen for sensitive answer patterns. Brief emcee on graceful redirects.</li>
+            <li>Print materials, charge devices.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="prep-block">
+        <div class="prep-when">
+          <span class="prep-when-label">Rehearse</span>
+          <span class="prep-when-out">2 & 1 weeks out</span>
+        </div>
+        <div class="prep-content">
+          <ul>
+            <li><strong>Full live-poll dry run</strong> with TMO team acting as attendees. Test response aggregation, screen-share, transition from polling to game.</li>
+            <li>Tech rehearsal with emcee + producer on actual hardware</li>
+            <li>Identify 3 attendees on the registration list who'd make great spotlight contestants in the finale</li>
+          </ul>
+        </div>
+      </div>
+      <div class="prep-block">
+        <div class="prep-when">
+          <span class="prep-when-label">Day-of</span>
+          <span class="prep-when-out">Oct 6, 2026</span>
+        </div>
+        <div class="prep-content">
+          <ul>
+            <li>Arrive 2 hours early. AV check, dual-screen confirmation, connectivity stress test with multiple devices</li>
+            <li>Table tents set with visible QR codes</li>
+            <li><strong>Tethered cellular hotspot on standby</strong> as Wifi backup</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- MATERIALS -->
+    <div class="sub-header">
+      <span class="sub-header-num">2.11</span>
+      <h3>Materials & Production</h3>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-icon">AV / TECH</span>
+        <h4>Stage & screens</h4>
+        <ul>
+          <li>Projector + dual screens (game board + live response visual)</li>
+          <li>Sound system, 2+ wireless mics</li>
+          <li>Laptop running game board, second device for polling admin</li>
+          <li>Clicker, sound effects board</li>
+          <li>Tethered cellular hotspot as Wifi backup</li>
+          <li>Printed answer boards as final fallback</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card-icon">LIVE POLLING</span>
+        <h4>The QR moment</h4>
+        <ul>
+          <li>Slido or Mentimeter event-tier account, TMO-branded</li>
+          <li>5–6 game questions + 1 warm-up pre-configured</li>
+          <li>Response visualizations per question type</li>
+          <li>Email opt-in on final screen</li>
+          <li>QR tested across iOS, Android, older devices</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card-icon">TABLE-LEVEL</span>
+        <h4>Per-table setup</h4>
+        <ul>
+          <li>Branded table tent with QR on both sides</li>
+          <li>Team name (e.g., "The Block Granters," "Team Recapture")</li>
+          <li>Printed "Scan to play" instructions</li>
+          <li>Dry-erase paddle + marker</li>
+          <li>Captain's score sheet</li>
+          <li>Branded swag bowl</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card-icon">ROOM-LEVEL</span>
+        <h4>Atmospherics</h4>
+        <ul>
+          <li>Visible scoreboard (digital secondary screen)</li>
+          <li>TMO-branded "Strike" graphic</li>
+          <li>Stage area for finale</li>
+          <li>Walk-in / walk-out music</li>
+          <li>Standing QR signage near entrances for late arrivals</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- BRANDING -->
+    <div class="sub-header">
+      <span class="sub-header-num">2.12</span>
+      <h3>Branding · Subtle, Not Salesy</h3>
+    </div>
+
+    <div class="pull-quote">
+      <div class="pull-quote-label">Recommended naming</div>
+      <p>"The Funding Feud" is fun, immediately signals the game format, and "funding" is the one word that unites every person in this room — directors, analysts, CDFI lenders alike. It pairs naturally with "Spin the Block" as the secondary concept.</p>
+    </div>
+
+    <ul style="margin: 24px 0 24px 24px; color: var(--ink-soft); line-height: 1.7;">
+      <li>Combined survey co-branded as "TMO + NACCED Field Survey 2026," cited in room and on leave-behind</li>
+      <li>Emcee transitions max 2x: <em>"This is the kind of pattern our team at TMO spends a lot of time listening for — across counties, not just within one."</em></li>
+      <li>Leave-behind one-pager is the only piece with overt product framing, still education-led</li>
+      <li>Live polling tool is TMO-branded — every attendee sees the brand on their own phone for the duration of the event</li>
+    </ul>
+
+    <!-- RISKS -->
+    <div class="sub-header">
+      <span class="sub-header-num">2.13</span>
+      <h3>Contingencies & Risks</h3>
+    </div>
+
+    <div class="risk-grid">
+      <div class="risk-row">
+        <div class="risk-name">Live poll response rate below ~40% of room</div>
+        <div class="risk-mitigation">Strong emcee push in first 5 min, repeated twice. Completion incentive: every completed survey enters a drawing for a $250 charitable donation in their org's name. Floor runners assist anyone struggling.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Wifi / cellular failure during polling window</div>
+        <div class="risk-mitigation">Tethered hotspot on standby. Slido and Menti both work over cellular if hotel Wifi fails. Worst case: switch to pre-event survey data for displayed boards — pre-tested, ready in under 60 seconds.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Polling tool crashes mid-event</div>
+        <div class="risk-mitigation">Pre-printed answer boards based on pre-event survey ready as fallback. Producer rehearsed in the swap.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Pre-event survey response below 50</div>
+        <div class="risk-mitigation">Supplement with TMO's existing client interview data + SME estimates. Pre-event is a prep tool now, not a public credibility prop — lower stakes.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">AV failure (projector / screens)</div>
+        <div class="risk-mitigation">Pre-printed answer boards. Emcee carries the room with voice only.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">A round falls flat</div>
+        <div class="risk-mitigation">Producer has 2 backup questions ready. Skip ahead.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Sensitive / political answer surfaces in live polling</div>
+        <div class="risk-mitigation">Producer has manual moderation in Slido / Menti — can hide individual responses before they appear on the displayed board. Emcee briefed on graceful redirects.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Audience too quiet at start</div>
+        <div class="risk-mitigation">Emcee uses the live polling moment itself as energy starter — "I want to see this word cloud filling up." Small spot prize in round 1 breaks the seal.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Pacing slips, running long</div>
+        <div class="risk-mitigation">Hard cut to Fast Cash at the 65-minute mark. Drop round 5 if needed. Producer is the timekeeper.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Multiple tables tie for Fast Cash slots</div>
+        <div class="risk-mitigation">Lightning tiebreaker — one quick question, fastest correct answer wins the slot.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Email opt-in raises consent concerns</div>
+        <div class="risk-mitigation">Clear opt-in language, no pre-checked boxes, explicit purpose ("only the results recap, no marketing"). TMO honors the boundary on first email.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ CONCEPT B ═══ -->
+<section class="sage-section" style="background: rgba(90, 107, 77, 0.04);">
+  <div class="container">
+    <span class="section-num">§ 03 — Secondary Concept</span>
+
+    <div class="concept-banner secondary">
+      <span class="concept-tag secondary">Backup</span>
+      <h2>Spin the <em>Block</em></h2>
+    </div>
+
+    <p class="concept-overview"><em>"Spin the Block"</em> is a play on Community Development Block Grants — an inside joke this audience will get immediately. The game is inspired by the TV show Wheel of Fortune, adapted so every table plays every round.</p>
+
+    <!-- WHAT IS WHEEL OF FORTUNE -->
+    <div class="sub-header" style="margin-top: 32px;">
+      <span class="sub-header-num">3.1</span>
+      <h3>What Is Wheel of Fortune?</h3>
+    </div>
+
+    <p>Wheel of Fortune has been on TV since 1975. There's a large spinning wheel and a puzzle board showing a hidden phrase — like a hangman board where you can see how many words and letters there are, but all the letters are blank. Contestants take turns spinning the wheel and guessing letters. If a letter is in the puzzle, it appears on the board. You keep guessing until you think you know the phrase, then you try to solve. The fun comes from watching the phrase slowly appear letter by letter, the excitement of the wheel spin, and the tension of deciding when to solve.</p>
+
+    <!-- HOW WE ADAPTED IT -->
+    <div class="sub-header">
+      <span class="sub-header-num">3.2</span>
+      <h3>How We Adapted It for NACCED</h3>
+    </div>
+
+    <p>The TV show has 3 contestants taking turns. We have a room full of tables. So we changed the format: <strong>every table plays every puzzle at the same time, looking at the same shared screen.</strong> The puzzle board is projected on the big screen for the whole room. Letters are revealed one at a time — everyone sees every letter as it appears. There's no hidden information between tables.</p>
+
+    <div class="callout">
+      <span class="callout-tag">The core game</span>
+      <p>The game is about <strong>when you choose to solve.</strong> Every table sees the same puzzle on the same shared screen. Letters are revealed one at a time by the emcee, with <strong>4 pauses</strong> per round where tables can attempt to solve. Solve early with fewer letters visible and you keep more of your points. Wait for more letters and you'll be more confident, but you'll earn less. Two wheels add variety: a <strong>big wheel</strong> at the front of the room sets the round's rules for everyone (e.g., "Speed Round," "Double Points," "Blind Round"), and a <strong>table spinner</strong> at each table determines your starting point bank — so every table has different stakes. Each table gets <strong>2 solve attempts</strong> per round. The whole game is one decision at each pause: <strong>"Do we know enough to solve right now, or do we wait?"</strong></p>
+    </div>
+
+    <p>Field expertise is directly rewarded. A table full of CDBG veterans will recognize "ENVIRONMENTAL REVIEW" after seeing just E, N, and V — and solve at Pause 1 for maximum points. A newer team might need 8 or 9 letters to be sure, solving later for fewer points. Meanwhile, the big wheel might have made this a "Double Points" round, and your table spinner might have given you 120 points instead of 80 — so the stakes and rewards are different at every table, every round.</p>
+
+    <!-- TWO WHEELS -->
+    <div class="sub-header">
+      <span class="sub-header-num">3.3</span>
+      <h3>Two Wheels — How They Work Together</h3>
+    </div>
+
+    <p style="margin-bottom: 24px;">Every round has two spins: a big wheel at the front of the room that sets the rules for everyone, and a small table spinner that every captain spins at their own table.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h4>The Big Wheel <span style="color: var(--sage); font-size: 11px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.12em; text-transform: uppercase; vertical-align: middle; margin-left: 8px;">Front of Room</span></h4>
+        <div class="compare-row">
+          <span class="compare-label">What it does</span>
+          <div class="compare-value">Sets the <strong>round rules</strong> that apply to every table equally. Modifiers change the pace, difficulty, or scoring of each round — for example, letters might come faster, points might be doubled, or the category might be hidden until letters start appearing.</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Who spins it</span>
+          <div class="compare-value">One captain per round, rotating. The emcee calls up a different table captain each round — a quick spotlight moment.</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Physical or digital?</span>
+          <div class="compare-value">Digital (projected on screen) for main rounds. Physical wheel for the championship finale.</div>
+        </div>
+      </div>
+      <div class="compare-card secondary">
+        <h4>The Table Spinner <span style="color: var(--sage); font-size: 11px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.12em; text-transform: uppercase; vertical-align: middle; margin-left: 8px;">Every Table</span></h4>
+        <div class="compare-row">
+          <span class="compare-label">What it does</span>
+          <div class="compare-value">Sets your table's <strong>starting point bank</strong> for the round. Different tables start with different amounts. "What are our stakes?"</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Who spins it</span>
+          <div class="compare-value">Every captain spins at their own table, simultaneously. The whole room spins at once — you hear cheers and groans as results land.</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Physical or digital?</span>
+          <div class="compare-value">Small branded tabletop spinner (cardboard + plastic arrow, TMO-branded). Doubles as take-home swag.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHAT'S ON THE BIG WHEEL -->
+    <div class="sub-header">
+      <span class="sub-header-num">3.4</span>
+      <h3>What's on the Big Wheel? — Room Modifiers</h3>
+    </div>
+
+    <p style="margin-bottom: 24px;">16 slots. Each one changes something about how the round plays for every table in the room.</p>
+
+    <div class="risk-grid">
+      <div class="risk-row">
+        <div class="risk-name">Standard Round <span style="font-size: 12px; color: var(--ink-muted);">× 3</span></div>
+        <div class="risk-mitigation">No special rules. Letters revealed at normal pace. Gives the room a baseline.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Speed Round <span style="font-size: 12px; color: var(--ink-muted);">× 2</span></div>
+        <div class="risk-mitigation">Letters revealed faster than normal. Less time to think between pauses. Creates urgency.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Generous Round <span style="font-size: 12px; color: var(--ink-muted);">× 2</span></div>
+        <div class="risk-mitigation">The emcee pre-reveals 3 free letters before the round begins. Everyone gets a head start.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Tough Round <span style="font-size: 12px; color: var(--ink-muted);">× 1</span></div>
+        <div class="risk-mitigation">The emcee starts by revealing uncommon letters instead of common ones. The puzzle stays harder longer.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Blind Round <span style="font-size: 12px; color: var(--ink-muted);">× 1</span></div>
+        <div class="risk-mitigation">No letters revealed for the first 30 seconds. Tables can try to solve from the category and puzzle shape alone for huge points.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Countdown Round <span style="font-size: 12px; color: var(--ink-muted);">× 2</span></div>
+        <div class="risk-mitigation">Tables only get 2 solve attempts instead of the normal amount. Higher pressure, choose wisely.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Best Practice Round <span style="font-size: 12px; color: var(--ink-muted);">× 1</span></div>
+        <div class="risk-mitigation">After the solve, every table writes a one-sentence best practice related to the puzzle phrase. Emcee picks the sharpest one for a spot prize.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Audience Choice <span style="font-size: 12px; color: var(--ink-muted);">× 1</span></div>
+        <div class="risk-mitigation">Emcee offers 3 category options. The room votes by applause. The crowd picks the round.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Mystery Round <span style="font-size: 12px; color: var(--ink-muted);">× 1</span></div>
+        <div class="risk-mitigation">The category isn't revealed until after the first 3 letters appear. Tables guess without context at first.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Bankrupt <span style="font-size: 12px; color: var(--ink-muted);">× 1</span></div>
+        <div class="risk-mitigation">All points earned this round are halved for every table. Rare, dramatic, keeps the leaderboard tight.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Double Points <span style="font-size: 12px; color: var(--ink-muted);">× 1</span></div>
+        <div class="risk-mitigation">All points earned this round are doubled for every table. The big swing round.</div>
+      </div>
+    </div>
+
+    <!-- WHAT'S ON THE TABLE SPINNER -->
+    <div class="sub-header">
+      <span class="sub-header-num">3.5</span>
+      <h3>What's on the Table Spinner? — Your Starting Point Bank</h3>
+    </div>
+
+    <p style="margin-bottom: 24px;">16 slots. Most determine how many points your table starts with for the round. A few add special abilities. Every captain spins at the same time — you hear the whole room react.</p>
+
+    <div class="risk-grid">
+      <div class="risk-row">
+        <div class="risk-name">100 Points <span style="font-size: 12px; color: var(--ink-muted);">× 4</span></div>
+        <div class="risk-mitigation">Standard starting bank. Solid foundation.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">120 Points <span style="font-size: 12px; color: var(--ink-muted);">× 2</span></div>
+        <div class="risk-mitigation">Larger bank. You can afford to wait a little longer and still come out ahead.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">80 Points <span style="font-size: 12px; color: var(--ink-muted);">× 2</span></div>
+        <div class="risk-mitigation">Tighter bank. Pressure to solve earlier or accept lower points.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">150 Points <span style="font-size: 12px; color: var(--ink-muted);">× 1</span></div>
+        <div class="risk-mitigation">The jackpot. Tons of room to play with.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">60 Points <span style="font-size: 12px; color: var(--ink-muted);">× 1</span></div>
+        <div class="risk-mitigation">Tiny bank. You're almost forced to swing early. The groan from the table is part of the fun.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Double or Nothing <span style="font-size: 12px; color: var(--ink-muted);">× 1</span></div>
+        <div class="risk-mitigation">No bank at all. Instead: solve correctly = 200 points flat. Don't solve = 0. High drama.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Free Clue + 100 <span style="font-size: 12px; color: var(--ink-muted);">× 1</span></div>
+        <div class="risk-mitigation">100-point bank plus your captain can privately ask the emcee (via a runner) whether one specific letter is in the puzzle before the round starts. One free peek.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Insurance + 100 <span style="font-size: 12px; color: var(--ink-muted);">× 1</span></div>
+        <div class="risk-mitigation">100-point bank plus your first wrong solve attempt doesn't count against your 2-guess limit. Effectively gives your table 3 attempts instead of 2.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Extra Guess + 100 <span style="font-size: 12px; color: var(--ink-muted);">× 1</span></div>
+        <div class="risk-mitigation">100-point bank plus you get one additional solve attempt beyond the normal limit.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">No Effect <span style="font-size: 12px; color: var(--ink-muted);">× 2</span></div>
+        <div class="risk-mitigation">100-point bank, no special ability. Straight play.</div>
+      </div>
+    </div>
+
+    <!-- HOW A ROUND WORKS — STEP BY STEP -->
+    <div class="sub-header">
+      <span class="sub-header-num">3.6</span>
+      <h3>What a Round Actually Looks Like — Step by Step</h3>
+    </div>
+
+    <p style="margin-bottom: 24px;">Here's exactly what happens in one round, from start to finish. Imagine you're sitting at a table of 7 people.</p>
+
+    <div class="timeline">
+      <div class="timeline-row">
+        <div class="timeline-time">Step 1</div>
+        <div class="timeline-content">
+          <h4>The big wheel spins</h4>
+          <p>The emcee calls up a table captain: "Table 4, come spin for us!" The captain walks to the front, spins the big wheel. It lands on <strong>"Speed Round."</strong> The emcee announces: "Letters are coming fast this round — stay sharp!" Everyone now knows the rules for this round.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">Step 2</div>
+        <div class="timeline-content">
+          <h4>Every table spins their table spinner</h4>
+          <p>The emcee says: "Captains, spin your tables!" All captains spin their tabletop spinners simultaneously. Your table lands on <strong>120 Points</strong> — cheers. The table next to you lands on <strong>60 Points</strong> — groans. Another table hits <strong>Double or Nothing</strong> — gasps. Every table now knows their personal stakes for this round.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">Step 3</div>
+        <div class="timeline-content">
+          <h4>The category and puzzle appear</h4>
+          <p>The emcee announces: "This round's category is <em>Project Roadblocks</em>." On the big screen, the puzzle board shows blank squares: <strong>_ _ _ _ _ _ _ _ _ _ _ _ _    _ _ _ _ _ _</strong>. Two words. 13 letters and 6 letters. Everyone sees the same thing.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">Step 4</div>
+        <div class="timeline-content">
+          <h4>Letters start appearing — Pause 1</h4>
+          <p>The emcee reveals 3 letters, one at a time. Everyone sees them on the shared screen: E appears in positions 1, 5, and 14. N appears in positions 2 and 8. The board now shows: <strong>E N _ _ E _ _ _ N _ _ _ _    _ E _ _ _ _</strong>. The emcee pauses: "Does anyone want to solve?" Your table huddles: "Project Roadblocks, E and N showing up a lot… could be ENVIRONMENTAL REVIEW." You have 120 points in your bank right now. Do you solve? Or wait for more letters to be sure?</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">Step 5</div>
+        <div class="timeline-content">
+          <h4>Tables decide — solve or wait</h4>
+          <p>Your table is pretty confident. Your captain writes "ENVIRONMENTAL REVIEW" on the paddle and holds it up. A runner comes by, checks it, gives a thumbs up. <strong>You solved at Pause 1 — you keep your full 120-point bank plus a 25-point solve bonus = 145 points this round.</strong> Three other tables also solved at Pause 1. Seven tables decided to wait.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">Step 6</div>
+        <div class="timeline-content">
+          <h4>More letters — Pause 2</h4>
+          <p>For the tables that waited, the emcee reveals 2–3 more letters. The board fills in further. Their banks drop from 100 to 75 (or from 120 to 90, etc.). Some solve now. Some wait again.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">Step 7</div>
+        <div class="timeline-content">
+          <h4>Pauses 3 and 4</h4>
+          <p>More letters each time. Banks keep shrinking. By Pause 4, most of the puzzle is visible and almost every table should be able to solve — but they're earning fewer points. Tables that still haven't solved and are out of guesses earn 0 for the round.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">Step 8</div>
+        <div class="timeline-content">
+          <h4>The reveal and scoring</h4>
+          <p>The emcee reveals the full answer on the big screen. Announces which tables solved at each pause, their point totals. Updates the leaderboard. Delivers a 30-second insight about the puzzle topic. Hands out a "Sharpest Solve" spot prize to the table that solved earliest or most creatively.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCORING BREAKDOWN -->
+    <div class="sub-header">
+      <span class="sub-header-num">3.7</span>
+      <h3>Scoring — How Points Work</h3>
+    </div>
+
+    <p style="margin-bottom: 24px;">Two things determine your score each round: <strong>when you solve</strong> and <strong>what your table spinner gave you.</strong></p>
+
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-icon">YOUR BANK</span>
+        <h4>Point bank shrinks each pause</h4>
+        <ul>
+          <li>Pause 1 (3 letters): Keep <strong>100%</strong> of your bank</li>
+          <li>Pause 2 (5–6 letters): Keep <strong>75%</strong> of your bank</li>
+          <li>Pause 3 (7–8 letters): Keep <strong>50%</strong> of your bank</li>
+          <li>Pause 4 (9+ letters): Keep <strong>25%</strong> of your bank</li>
+          <li>Never solve: <strong>0</strong> points</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card-icon">SOLVE BONUS</span>
+        <h4>Flat bonus for solving</h4>
+        <ul>
+          <li>Every correct solve: <strong>+25 points</strong> regardless of when</li>
+          <li>This means even a Pause 4 solve earns something meaningful</li>
+          <li>A table with a 100-point bank that solves at Pause 4: 25 + 25 = 50 points</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card-icon">EXAMPLE</span>
+        <h4>Same round, different outcomes</h4>
+        <ul>
+          <li>Table A (bank: 120, solves Pause 1): 120 + 25 = <strong>145 pts</strong></li>
+          <li>Table B (bank: 100, solves Pause 2): 75 + 25 = <strong>100 pts</strong></li>
+          <li>Table C (bank: 60, solves Pause 1): 60 + 25 = <strong>85 pts</strong></li>
+          <li>Table D (bank: 100, solves Pause 4): 25 + 25 = <strong>50 pts</strong></li>
+          <li>Table E (Double or Nothing, solves): <strong>200 pts</strong></li>
+          <li>Table F (bank: 150, never solves): <strong>0 pts</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="callout-tag">Wrong guesses</span>
+      <p>Each table gets <strong>2 solve attempts per round.</strong> A wrong guess doesn't lose you points — but it burns one of your attempts. If you use both and get both wrong, you're done for the round and earn 0. This prevents teams from just guessing at every pause, and creates a real cost to guessing before you're ready.</p>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="sub-header">
+      <span class="sub-header-num">3.8</span>
+      <h3>The Five Categories</h3>
+    </div>
+
+    <p style="margin-bottom: 24px;">Each round has a different category. The categories are ordered to tell a story about the work: start with the pain points, move through the vocabulary, and end on forward-looking strategies.</p>
+
+    <div class="question-list">
+      <div class="question-item">
+        <div class="question-header"><span class="question-round">Round 1 · Easiest</span></div>
+        <div class="question-text">"Project Roadblocks"</div>
+        <div class="question-answers"><strong>Sample puzzles:</strong> ENVIRONMENTAL REVIEW · PROCUREMENT DELAYS · MISSING DOCUMENTATION · DAVIS BACON COMPLIANCE<br><em>Round 1 is intentionally the easiest so tables learn the mechanic through play.</em></div>
+      </div>
+      <div class="question-item">
+        <div class="question-header"><span class="question-round">Round 2 · Lighter</span></div>
+        <div class="question-text">"Acronym Soup"</div>
+        <div class="question-answers"><strong>Sample puzzles:</strong> INTEGRATED DISBURSEMENT INFORMATION SYSTEM · COMMUNITY DEVELOPMENT BLOCK GRANT · LOW TO MODERATE INCOME<br><em>The crowd-pleaser. Everyone knows these — the fun is solving before all the letters appear.</em></div>
+      </div>
+      <div class="question-item">
+        <div class="question-header"><span class="question-round">Round 3</span></div>
+        <div class="question-text">"Affordable Housing Programs"</div>
+        <div class="question-answers"><strong>Sample puzzles:</strong> FIRST TIME HOMEBUYER ASSISTANCE · DOWN PAYMENT ASSISTANCE PROGRAM · HOME INVESTMENT PARTNERSHIPS</div>
+      </div>
+      <div class="question-item">
+        <div class="question-header"><span class="question-round">Round 4</span></div>
+        <div class="question-text">"What High-Performing Counties Do"</div>
+        <div class="question-answers"><strong>Sample puzzles:</strong> STANDARDIZED REPORTING · CENTRALIZED PROJECT TRACKING · AUDIT READY ALL YEAR</div>
+      </div>
+      <div class="question-item">
+        <div class="question-header"><span class="question-round">Round 5</span></div>
+        <div class="question-text">"Fast Track Strategies"</div>
+        <div class="question-answers"><strong>Sample puzzles:</strong> BUILD A REPEATABLE PROCESS · MOVE FROM SPREADSHEETS TO SYSTEMS · AUTOMATE COMPLIANCE REPORTING</div>
+      </div>
+    </div>
+
+    <!-- CHAMPIONSHIP -->
+    <div class="feature-block">
+      <div class="feature-eyebrow">3.9 · The Championship Round</div>
+      <h3>Final Puzzle · <em>What Counties Need</em></h3>
+      <p style="margin-bottom: 24px;">This is the one moment where a single table takes the stage. The top-scoring table sends their captain and one teammate up front to stand next to a <strong style="color: var(--ochre);">physical wheel</strong> — the theatrical payoff of the whole event. The emcee reveals a final puzzle from the category "What Counties Need." Some letters are pre-revealed (R, S, T, L, N, E — like on TV). The players spin the physical wheel to determine bonus multipliers, pick additional letters, and try to solve while the whole room watches.</p>
+      <p style="margin-bottom: 8px;"><strong style="color: var(--ochre);">Sample final puzzles:</strong> "ONE SYSTEM FOR ALL PROGRAMS" · "MORE TIME TO SERVE FAMILIES" · "FROM SPREADSHEETS TO SOLUTIONS" · "EVERY DOLLAR ACCOUNTED FOR"</p>
+
+      <div class="prize-tiers">
+        <div class="prize-tier">
+          <div class="prize-amount">$1,000</div>
+          <div class="prize-condition">Charitable donation in the winning organization's name (parameters TBD with NACCED and TMO)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RUN OF SHOW -->
+    <div class="sub-header">
+      <span class="sub-header-num">3.10</span>
+      <h3>Run of Show · 90 minutes</h3>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-row">
+        <div class="timeline-time">0:00 – 0:15</div>
+        <div class="timeline-content">
+          <h4>Doors, lunch, seating</h4>
+          <p>Branded table tents with paddles, markers, table spinners, score sheets, and a category preview card already set.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">0:15 – 0:25</div>
+        <div class="timeline-content">
+          <h4>Welcome + rules + practice round</h4>
+          <p>Emcee walks the room through one full unscored round. Everyone practices spinning, seeing letters appear, deciding when to solve. The mechanic clicks before points are on the line.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">0:25 – 1:05</div>
+        <div class="timeline-content">
+          <h4>Five main rounds · ~8 min each</h4>
+          <p>Every table plays every puzzle. Big wheel + all table spinners spin at the top of each round. Letters revealed, pauses, solves, scoring, emcee insight, leaderboard update.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">1:05 – 1:22</div>
+        <div class="timeline-content">
+          <h4>Championship round</h4>
+          <p>Top table goes to the stage with the physical wheel for the final puzzle.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-time">1:22 – 1:30</div>
+        <div class="timeline-content">
+          <h4>Awards, donation, photo</h4>
+          <p>Same closing rhythm as The Funding Feud.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREP & MATERIALS -->
+    <div class="sub-header">
+      <span class="sub-header-num">3.11</span>
+      <h3>Preparation & Materials</h3>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-icon">PREP TIMELINE</span>
+        <h4>Working backward</h4>
+        <ul>
+          <li><strong>10–12 weeks:</strong> Confirm format with NACCED, lock emcee, decide on physical wheel for finale</li>
+          <li><strong>8–10 weeks:</strong> Build puzzle bank (30+ puzzles), build game board software, design and order branded table spinners</li>
+          <li><strong>4–6 weeks:</strong> Pre-test puzzles with TMO clients, order remaining branded materials, order physical wheel</li>
+          <li><strong>1–3 weeks:</strong> Full dry run with emcee, tech rehearsal, spinner and wheel test</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card-icon">AV / TECH</span>
+        <h4>What we need in the room</h4>
+        <ul>
+          <li>Projector + screen for the puzzle board (large enough for the whole room)</li>
+          <li>Second screen or portion of screen for the digital big wheel + leaderboard</li>
+          <li>Physical wheel for the championship round</li>
+          <li>Sound system, 2+ wireless mics</li>
+          <li>Sound effects: wheel spin, letter reveal, solve fanfare</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card-icon">PER TABLE</span>
+        <h4>Table setup</h4>
+        <ul>
+          <li>Branded tabletop spinner (TMO colors, 16 slots, doubles as swag)</li>
+          <li>Dry-erase paddle + markers</li>
+          <li>Score sheet, team name placard, category preview card</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card-icon">TEAM · 7 ROLES</span>
+        <h4>Staffing</h4>
+        <ul>
+          <li><strong>Emcee:</strong> Hired pro — needs showman energy for wheel spins and letter reveals</li>
+          <li><strong>Producer:</strong> Runs puzzle board, controls letter reveals, manages digital wheel</li>
+          <li><strong>Floor runners (×2):</strong> Check solve attempts at each pause, confirm spinner results</li>
+          <li><strong>Scorekeeper:</strong> Tracks point banks + solve timing per table</li>
+          <li><strong>Photographer + Greeter</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RISKS -->
+    <div class="sub-header">
+      <span class="sub-header-num">3.12</span>
+      <h3>Risks & Contingencies</h3>
+    </div>
+
+    <div class="risk-grid">
+      <div class="risk-row">
+        <div class="risk-name">Tables don't understand the "bank shrinks each pause" mechanic</div>
+        <div class="risk-mitigation">The practice round is critical — run one full unscored round so everyone sees the bank drop in action. The emcee explicitly narrates: "If you solve now, you keep 100. If you wait, it drops to 75."</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">One table solves early and shouts the answer</div>
+        <div class="risk-mitigation">Answers are written on paddles, not spoken. Runners check silently. The emcee doesn't confirm any solve until the round ends. Shouting an answer = that table's solve is disqualified.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Physical wheel doesn't arrive or breaks</div>
+        <div class="risk-mitigation">Digital wheel fallback for championship round. Emcee plays it off naturally.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Table spinners land on the same result and feel unfair</div>
+        <div class="risk-mitigation">With 16 slots and 10–20 tables, overlaps are expected and fine. A few tables with the same bank doesn't feel unfair — it's the table-specific variation that matters, not uniqueness.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Puzzles too easy — everyone solves at Pause 1</div>
+        <div class="risk-mitigation">Pre-test with TMO clients. Difficulty should ramp across rounds. Use longer or less common phrases in later rounds.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Puzzles too hard — nobody solves before Pause 4</div>
+        <div class="risk-mitigation">Emcee has backup easier puzzles. Can also add a mid-round hint ("Think about the Environmental Review process…") to keep the room moving.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Runners can't check all paddles fast enough at each pause</div>
+        <div class="risk-mitigation">Only tables attempting to solve hold up paddles — not every table every pause. Most pauses will have 3–8 tables attempting. Two runners can cover 20 tables.</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-name">Round runs over time</div>
+        <div class="risk-mitigation">8-minute hard cap. If the puzzle isn't solved by Pause 4, emcee reveals the answer and moves on. Drop round 5 if running long overall.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMPARISON ═══ -->
+<section>
+  <div class="container">
+    <span class="section-num">§ 04 — Pick Your Path</span>
+    <h2 class="section-title">Two formats, one decision.</h2>
+    <p class="section-lede">Both deliver charitable impact, brand recall, and an inclusive room. They differ on tech profile, lead time, and the kind of moment they create.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h4>The Funding Feud <span style="color: var(--clay); font-size: 12px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.15em; text-transform: uppercase; vertical-align: middle; margin-left: 8px;">Primary</span></h4>
+        <div class="compare-row">
+          <span class="compare-label">Production Complexity</span>
+          <div class="compare-value">Medium-High — live polling adds tech</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Lead Time</span>
+          <div class="compare-value">8–10 weeks</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Engagement Model</span>
+          <div class="compare-value">Every table plays + every attendee contributes data</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Credibility Hook</span>
+          <div class="compare-value">The room IS the data — answered live, displayed live</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Tech-Forward Signal</span>
+          <div class="compare-value">Strong — branded live polling, mobile-first</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Lead Capture</span>
+          <div class="compare-value">Built in via final poll screen opt-in</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Execution Risk</span>
+          <div class="compare-value">Medium — connectivity is the new dependency</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Best If NACCED Says…</span>
+          <div class="compare-value">"We want everyone participating, and we want it to feel modern"</div>
+        </div>
+      </div>
+
+      <div class="compare-card secondary">
+        <h4>Spin the Block <span style="color: var(--sage); font-size: 12px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.15em; text-transform: uppercase; vertical-align: middle; margin-left: 8px;">Backup</span></h4>
+        <div class="compare-row">
+          <span class="compare-label">Production Complexity</span>
+          <div class="compare-value">Medium-High — two wheels (room + table), puzzle board, solve-timing mechanic</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Lead Time</span>
+          <div class="compare-value">6–8 weeks</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Engagement Model</span>
+          <div class="compare-value">Every table plays every puzzle. Two wheels create different stakes per table. Solve earlier = more points.</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Credibility Hook</span>
+          <div class="compare-value">Domain-specific puzzles + category arc that tells a field story</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Tech-Forward Signal</span>
+          <div class="compare-value">Moderate — theatrical but not innovative</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Lead Capture</span>
+          <div class="compare-value">Requires separate mechanism</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Execution Risk</span>
+          <div class="compare-value">Medium — table spinners add a production element; physical wheel is a logistics dependency</div>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Best If NACCED Says…</span>
+          <div class="compare-value">"We want a theatrical centerpiece moment with insider-knowledge satisfaction"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PATH FORWARD ═══ -->
+<section>
+  <div class="container">
+    <span class="section-num">§ 05 — Recommended Path Forward</span>
+    <h2 class="section-title">From this draft to <em>October</em>.</h2>
+
+    <div class="path-list">
+      <div class="path-item">
+        <div class="path-content">
+          <h4>Get NACCED's read on both concepts</h4>
+          <p>They know their room better than we do. Let them tell us which energy fits the conference.</p>
+        </div>
+      </div>
+      <div class="path-item">
+        <div class="path-content">
+          <h4>If The Funding Feud wins</h4>
+          <p>Lock the live polling platform within 2 weeks. Confirm room connectivity with NACCED and the hotel within 4 weeks. Send the pre-event survey at 6 weeks out as a prep + safety net.</p>
+        </div>
+      </div>
+      <div class="path-item">
+        <div class="path-content">
+          <h4>If Spin the Block wins</h4>
+          <p>Lock the AV vendor and emcee within 2 weeks. Production is the long pole.</p>
+        </div>
+      </div>
+      <div class="path-item">
+        <div class="path-content">
+          <h4>Regardless of pick</h4>
+          <p>Confirm the charitable donation structure with TMO finance / legal in the next 2 weeks so it's not a day-of question.</p>
+        </div>
+      </div>
+      <div class="path-item">
+        <div class="path-content">
+          <h4>Build the post-event content plan in parallel</h4>
+          <p>Photo coverage, LinkedIn write-up, follow-up email to attendees (especially poll opt-ins) with the survey / lessons one-pager. This is where lunch turns into pipeline.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    TMO × NACCED 2026 · Draft 02 · Internal Working Document · <span>Ready for internal alignment</span>
+  </div>
+</footer>
+
+</body>
+</html>
